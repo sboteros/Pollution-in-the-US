@@ -51,7 +51,7 @@
   
   # 3.2. Plot total emissions in Baltimore City, by type 
   png(here("plot3.png"))
-  with(nei, plot(year, total, type = "b", 
-                 main = "Total Emissions in Baltimor City",
-                 xlab = "Year",  ylab = "Total PM2.5 emissions (ton)"))
+  ggplot(nei, aes(year, total)) + geom_line() +
+    labs(title = "Total Emissions in Baltimore City, by type",
+         y = "Total PM2.5 emissions (ton)") + facet_grid(. ~ type) + theme_bw()
   dev.off()

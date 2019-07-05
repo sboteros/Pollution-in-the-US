@@ -47,6 +47,6 @@
   # 3.2. Plot total emissions in Baltimore City
   png(here("plot2.png"))
   with(nei, plot(year, total, type = "b", 
-                 main = "Total Emissions in Baltimor City",
+                 main = "Total Emissions in Baltimore City",
                  xlab = "Year",  ylab = "Total PM2.5 emissions (ton)"))
   dev.off()
